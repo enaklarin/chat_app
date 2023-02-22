@@ -1,12 +1,13 @@
 import {React,Component} from "react";
-import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid';
 
-const randomId=nanoid();
+
 
 class Messages extends Component {
 
-    renderMessage=({member, text} )=> {
-        // const {member, text} = message; 
+
+    renderMessage=({member, text})=> {
+        const randomId=nanoid();
         const {currentMember} = this.props;
         const messageFromMe = member.id === currentMember.id;
         const className = messageFromMe ? "Messages-message currentMember" : "Messages-message"

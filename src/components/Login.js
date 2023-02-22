@@ -7,7 +7,15 @@ export default class Login extends Component {
         username:""
     }
   
+    
+    onValueChange=(e)=>{
+        const name = e.target.name;
+        const value = e.target.value;
+        this.setState({ [name]: value });
 
+    }  
+
+  
     handleSubmit=(e)=>{
       e.preventDefault();
       if(this.state.username === "" ){
@@ -18,13 +26,7 @@ export default class Login extends Component {
    
      }
 
-  
-    onValueChange=(e)=>{
-        const name = e.target.name;
-        const value = e.target.value;
-        this.setState({ [name]: value });
-
-    }       
+       
     
   render() {
     return (

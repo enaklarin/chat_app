@@ -11,12 +11,13 @@ class Input extends Component {
   onChange(e) {
     this.setState({text: e.target.value});
   }
-
+  
+  
   onSubmit(e) {
     e.preventDefault();
     this.state.text === "" ? (alert("You can not send empty message,please write your message.")):
-    this.setState({text: "" });
     this.props.onSendMessage(this.state.text);
+    this.setState({text: "" });
   }
 
   render() {
